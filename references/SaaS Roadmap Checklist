@@ -1,0 +1,78 @@
+SaaS Roadmap Checklist
+Use this checklist to ensure roadmap coverage is complete. Do not dump every item into the answer; select what matters for the user's product, phase, and audience.
+Strategy Inputs
+Product category, core workflow, target personas, buyer, and user.
+Business model: free trial, freemium, seat-based, usage-based, tiered, enterprise contract, marketplace, or services-assisted.
+Launch path: prototype, MVP, pilot, private beta, public launch, product-led growth, sales-led enterprise, or agency handoff.
+Deployment model: multi-tenant SaaS, single-tenant, region-specific, private cloud, hybrid, or on-prem.
+Constraints: budget, timeline, team skills, existing stack, regulatory exposure, data sensitivity, expected traffic, uptime target, and vendor preferences.
+Success metrics: activation, retention, conversion, revenue, usage, latency, reliability, support volume, gross margin, and sales cycle velocity.
+Phase Template
+For each phase, define:
+Objective and target users.
+User-facing features and admin or operations features.
+Architecture and infrastructure changes.
+Data model, migrations, storage, retention, and backups.
+APIs, events, webhooks, background jobs, and integration boundaries.
+Authentication, authorization, tenancy, auditability, and access control.
+Billing, entitlements, invoices, taxes, trials, dunning, and subscription lifecycle.
+Security, privacy, compliance, and legal readiness.
+Testing strategy and release quality bar.
+DevOps, environments, CI/CD, rollback, and release process.
+Observability, analytics, support tooling, and runbooks.
+Technical debt accepted, debt retired, and debt watchlist.
+Team needs, ownership, delivery milestones, and dependencies.
+Exit criteria and go/no-go gates.
+Common Phases
+MVP
+Ship the smallest paid, pilot-ready, or learning-ready workflow.
+Include account setup, core tenant model, basic roles, primary workflow, minimal admin, billing-ready data model, error tracking, backups, and manual support paths.
+Prefer a modular monolith, managed services, and explicit domain boundaries over premature microservices.
+Gate: target users can complete the primary workflow, data is recoverable, billing path is credible, and incidents can be triaged.
+Early Traction
+Harden onboarding, permissions, data import and export, customer feedback loops, analytics, audit events, support tools, and integration edges.
+Add migration discipline, staging parity, seed or test data, basic load testing, and rollback paths.
+Gate: pilot customers can run real workloads with acceptable support burden.
+Public Launch
+Add production SLOs, incident process, customer communications, production monitoring, security review, abuse controls, billing automation, tax or invoice handling, and support workflows.
+Improve performance for expected launch traffic and document capacity assumptions.
+Gate: launch load is modeled, payment lifecycle works, support can respond, and rollback is rehearsed.
+Growth
+Introduce caching, queues, read replicas, search, analytics warehouse, service extraction, event-driven workflows, regional strategy, or dedicated workers only when triggers justify them.
+Mature CI/CD, infrastructure as code, secrets management, cost tracking, data lifecycle, operational runbooks, and ownership boundaries.
+Gate: bottlenecks are measured, reliability and cost remain within targets, and engineering can ship without repeated operational disruption.
+Enterprise Readiness
+Add SSO/SAML/OIDC, SCIM, granular RBAC or ABAC, audit logs, data residency, configurable retention, legal holds, customer-managed keys if required, security questionnaires, SOC 2 or relevant compliance path, advanced reporting, sandbox tenants, and enterprise support model.
+Provide integration governance, versioned APIs, webhook reliability, admin analytics, procurement support, and account management workflows.
+Gate: enterprise sales, security review, onboarding, support, and compliance obligations are repeatable.
+Architecture Decisions To Call Out
+Modular monolith versus services.
+Multi-tenant isolation model.
+Data model ownership and migration policy.
+API style, versioning, SDKs, and webhook reliability.
+Sync versus async processing.
+Build versus buy for auth, billing, analytics, notifications, search, support, CRM, and data pipelines.
+Region, residency, and disaster recovery strategy.
+Operational ownership, incident response, and support model.
+Scalability Triggers
+Users: concurrent users, monthly active users, tenants, admins, seats, and enterprise accounts.
+Traffic: requests per minute, job throughput, webhook volume, API consumers, and background queue depth.
+Data: database size, table growth, query latency, file or object storage, analytics volume, and retention requirements.
+Reliability: uptime target, recovery time objective, recovery point objective, incident frequency, and customer escalation severity.
+Compliance: regulated data, enterprise security review, audit requirements, data residency, privacy commitments, and contractual obligations.
+Organization: number of engineers, release frequency, support tickets, sales commitments, implementation workload, and handoff needs.
+Cost: cloud spend per customer, gross margin pressure, vendor overage, and operational labor per account.
+Release Gates
+Product: critical user journeys pass, onboarding works, product analytics are instrumented, and core jobs are completed by target users.
+Quality: automated tests cover core flows, migrations are tested, critical browser or device targets are verified, and acceptance criteria are explicit.
+Security: dependency scan, secrets review, authorization checks, access logs, data privacy review, and abuse controls are complete.
+Performance: expected load is tested, slow queries are identified, capacity plan is documented, and rollback has been rehearsed.
+Operations: dashboards, alerts, backups, restore test, runbooks, customer support path, and incident owner are ready.
+Business: pricing and packaging are configured, billing is tested, terms and privacy materials are ready, and sales or support teams can explain the release.
+Output Guidance
+Prefer phase tables for executive readability and short bullets for risks, gates, and triggers.
+Include concrete deliverables and measurable exit criteria.
+Separate immediate priorities from later-stage investments.
+Distinguish must-have now, design for later, and defer safely.
+Surface critical path dependencies early.
+Keep the roadmap opinionated but adaptable to the user's constraints.
