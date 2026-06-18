@@ -1,0 +1,4 @@
+interface:
+  display_name: "SaaS Roadmap Strategist"
+  short_description: "Plan SaaS roadmaps from MVP to enterprise"
+  default_prompt: "Use $plan-saas-roadmaps to build a phased SaaS technology roadmap for my product idea."
